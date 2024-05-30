@@ -22,7 +22,7 @@ except:
 fhandle2 = open(output_filename, 'w')
 # fhandle2 = open(output_filename, 'wb')
 # pickle.dump(d, fhandle2)
-fhandle2.write(str(l) + '&' + str(d) + '\n')
+# fhandle2.write(str(l) + '&' + str(d) + '\n')
 # fhandle2.write('Good morning\n')
 # fhandle2.write('How are you?\n')
 # fhandle2.write('%s\n' % num)
