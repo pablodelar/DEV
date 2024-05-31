@@ -10,14 +10,17 @@ csv_file_organizations = 'organizations-100.csv'
 
 ############################## Reading CSV files with pandas ##############################
 
-df = pandas.read_csv(csv_files_path + csv_file_organizations, index_col= 'Organization Id')
+# df = pandas.read_csv(csv_files_path + csv_file_organizations, index_col= 'Organization Id')
+df = pandas.read_csv(csv_files_path + csv_file_organizations)
 
-print(type(df))
+# print(type(df))
 # print(type(df['Number of employees'][0]))
 
 # print(df)
 
-print(type(df['Index']))
+index = (df['Index'])
+for i in index:
+    print(type(i))
 
 
 ############################## Writing CSV files with pandas ##############################
