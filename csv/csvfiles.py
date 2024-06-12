@@ -23,7 +23,7 @@ with open(csv_files_path + csv_file_people, 'r') as csv_file:
 '''
 
 ############################## Reading CSV files into a Dictionary with csv ##############################
-'''
+
 l = ['Index','User Id','First Name','Last Name','Sex','Email','Phone','Date of birth','Job Title']
 
 with open(csv_files_path + csv_file_people, 'r') as csv_file:
@@ -31,7 +31,7 @@ with open(csv_files_path + csv_file_people, 'r') as csv_file:
     #     print(type(line))
     # print(type(csv_file))
     csv_reader = csv.DictReader(csv_file)
-    # print(type(csv_reader))
+    print(type(csv_reader)) # csv.DictReader
     line_count = 0
     for row in csv_reader:
         if line_count == 0:
@@ -39,10 +39,10 @@ with open(csv_files_path + csv_file_people, 'r') as csv_file:
             # print(f'Column names are {", ".join(row)}') # TEST this on IDLE
             line_count += 1
         # print(f'{row['First Name']}')
-        # print(type(row))
+        # print(type(row)) # dict
         line_count += 1
     print(f'Processed {line_count} lines.')
-'''
+
 
 ############################## Writing CSV files with csv ##############################
 '''
@@ -56,7 +56,7 @@ with open('output.csv', mode = 'w') as output_file:
 '''
 
 ############################## Writing CSV files into a Dictionary with csv ##############################
-
+'''
 fieldnames = ['Name', 'Dept', 'BirthMonth']
 
 with open('output_dictwriter.csv', mode = 'w') as output_file:
@@ -65,3 +65,4 @@ with open('output_dictwriter.csv', mode = 'w') as output_file:
     output_writer.writeheader()
     output_writer.writerow({'Name': 'Johnny Lawrence', 'Dept': 'Cobra Kai', 'BirthMonth': 'March'})
     output_writer.writerow({'Name': 'Daniel Larusso', 'Dept': 'Miyagi-Do', 'BirthMonth': 'July'})
+'''
