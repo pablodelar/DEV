@@ -1,10 +1,10 @@
 from functools import reduce
 
-# str = 'X-DSPAM-Confidence: 0.8475  '
+str = 'X-DSPAM-Confidence: 0.8475  '
 
-# start = str.find(':')
-# fl = float(str[start + 1:].strip()) # We don't need to use strip() before converting to float, since float function will ignore whitespaces.
-# print(type(fl))
+start = str.find(':')
+fl = float(str[start + 1:].strip()) # We don't need to use strip() before converting to float, since float function will ignore whitespaces.
+print(type(fl))
 
 # Convert binary digits to integer with ord
 b = '1101'
@@ -171,3 +171,18 @@ s.starttls()
 s.login("pythonexercises@pabs.com", "123456")
 message = "Hola"
 s.sendmail("pythonexercises@pabs.com", "pablo.delar@gmail.com", message)
+
+
+# Decorator exercise
+def my_decorator(func):
+    def wrapper():
+        print("Something is happening before the function is called.")
+        func()
+        print("Something is happening after the function is called.")
+    return wrapper
+
+@my_decorator
+def say_hello():
+    print("Hello!")
+
+say_hello()
