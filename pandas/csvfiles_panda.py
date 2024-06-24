@@ -13,7 +13,7 @@ csv_file_organizations = 'organizations-100.csv'
 # df = pandas.read_csv(csv_files_path + csv_file_organizations, index_col= 'Organization Id')
 df = pandas.read_csv(csv_files_path + csv_file_organizations)
 
-# print(type(df))
+print(type(df))
 # print(type(df['Number of employees'][0]))
 
 # print(df.head(10)) # To print the first 'n' lines of the data frame
@@ -21,7 +21,7 @@ df = pandas.read_csv(csv_files_path + csv_file_organizations)
 # print(df.columns) # If the input file does NOT include column names -> Define a list 'headers' with the column names and run df.colums = headers
 # print(df.dtypes) # To check data types
 # print(df.describe(include='all')) # Returns a statistical summary
-print(df.info())
+# print(df.info())
 
 # index = (df['Index'])
 # for i in index:
